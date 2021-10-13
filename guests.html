@@ -13,21 +13,42 @@
       <a href="guests.html"><div id="guests" class="btn">Guests</div></a>
     </div>
     <h1>Guests</h1>
-        
+
     <div id="container">
-        <div id="RR">
-            <img src="RR.jpg" alt="Ryan Reynolds" >
-            <p></p>
-        </div>
-        <div id="RDJ">
-            <img src="RDJ.png" alt="Robert Downey Jr" width="300" height="300">
-            <p></p>
-        </div>
-        <div id="AG">
-            <img src="AG.jpg" alt="Ariana Grande">
-            <p></p>
-        </div>
+      <div id="RR" class="celebs">
+        <img src="RR.jpg" alt="Ryan Reynolds" />
+        <p>Our founder, Ryan Reynolds, award winning actor and CEO of Mint Mobile, meets with us at every event. Find his making speeches, meeting with people, and sometimes even participating in event games</p>
+      </div>
+      <div id="RDJ" class="celebs">
+        <img src="RDJ.jpg" alt="Robert Downey Jr"/>
+        <p>Yes, even Iron Man likes animals. We pretty much just use him for his fans. They like to raid out events when he's at one of them. More people at our events yay!</p>
+      </div>
+      <div id="AG" class="celebs">
+        <img src="AG.jpg" alt="Ariana Grande" />
+        <p>Ariana likes to spontaneously tell us that she is coming to our events last second. Because of this we don't have enough time to update our events page to let people know she is coming. You're going to have to come to every event for the chance to see her sing and preform</p>
+      </div>
     </div>
   </body>
-
+  <script>
+    let total = 0;
+    let bar = document.getElementById('bar')
+    window.addEventListener('wheel', event => {
+      console.log(total+=event.deltaY)
+      if (total+=event.deltaY>=400 && event.deltaY>0){
+        //console.log(true)
+        total=400
+      }
+      else{
+        total+=event.deltaY
+      }
+      //console.log(total)
+      //console.log(event.deltaY)
+      if (event.deltaY > 30) {
+        bar.classList.add('stick')
+      }
+      if (total<30){
+        bar.classList.remove('stick')
+      }
+    })
+  </script>
 </html>
