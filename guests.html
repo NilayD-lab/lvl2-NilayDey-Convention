@@ -33,20 +33,10 @@
     let total = 0;
     let bar = document.getElementById('bar')
     window.addEventListener('wheel', event => {
-      console.log(total+=event.deltaY)
-      if (total+=event.deltaY>=400 && event.deltaY>0){
-        //console.log(true)
-        total=400
-      }
-      else{
-        total+=event.deltaY
-      }
-      //console.log(total)
-      //console.log(event.deltaY)
-      if (event.deltaY > 30) {
+      if (window.scrollY>100){
         bar.classList.add('stick')
       }
-      if (total<30){
+      else{
         bar.classList.remove('stick')
       }
     })

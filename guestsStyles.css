@@ -59,7 +59,7 @@ body{
     width: 60%;
     height: 300px;
     display: grid;
-    grid-template-columns: 10vw 60%;
+    grid-template-columns: 12vw 60%;
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
