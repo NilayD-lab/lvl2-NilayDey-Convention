@@ -72,49 +72,37 @@ body{
     width: 20%;
     height: 300px;
     display: grid;
-    grid-template-columns: 12vw;
+    grid-gap: 50px;
+    grid-template-columns: 12vw auto;
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
     transition: width 600ms;
-    position: relative;
   }
   .celebs:hover{
     width: 60%;
-    
-    /* grid-template-columns: 12vw 60%; */
-
   }
   .celebs:hover img{
-    transform: translate(0%);
+    transform: translate(30%);
   }
-  /* .celebs::after{
-    content: attr(data-tool-tip);
-    position: absolute;
-    width: 30vw;
-    height: 100px;
-    left: 30%;
-    color: black;
-    font-size: 1.5rem;
-  } */
   .celebs:hover p{
-    white-space: pre-wrap;
+
     transform: scale(1);
     opacity: 1;
-    transition: transform 0ms 600ms, opacity 200ms 600ms ;
+    transition: transform 0ms 600ms, opacity 400ms 600ms;
     
   }
   img{
     grid-column: 1;
     box-shadow: 0px 0px 10px black;
-
     width: 100%;
     border-radius: 30px;
+    transform: translateX(30%);
     transition: transform 600ms;
   }
   p{
-    opacity: 1;
     transform: scale(0);
+    opacity: 0;
     grid-column: 2;
     color: black;
     width: 70%;

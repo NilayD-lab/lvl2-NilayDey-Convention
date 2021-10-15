@@ -59,6 +59,8 @@ h3{
   margin-top:100px;
   text-align: center;
   font-size: 2rem;
+  transform: translateY(210%);
+  transition: transform 600ms 150ms;
 }
 
 img{
@@ -76,7 +78,8 @@ p{
   font-family: "Times New Roman", Times, sans-serif;
   font-size: 1.2rem;
   color: #FFFAEB;
-  transition: color 800ms;
+  transition: color 600ms 0ms;
+
 }
 u{
   text-underline-offset: 3px;
@@ -99,9 +102,15 @@ u{
 
 
 }
-
-p:hover{
+span div:hover p{
   color: black;
+  transition: color 600ms 400ms;
+
+}
+span div:hover h3{
+  transform: translateY(-110%);
+  transition: transform 600ms 0ms;
+
 }
 .stick .btn{
   background-color: white;
