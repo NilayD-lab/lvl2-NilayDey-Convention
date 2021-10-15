@@ -17,7 +17,7 @@
     <div id="container">
       <div id="RR" class="celebs">
         <img src="RR.jpg" alt="Ryan Reynolds" />
-        <p>Our founder, Ryan Reynolds, award winning actor and CEO of Mint Mobile, meets with us at every event. Find his making speeches, meeting with people, and sometimes even participating in event games</p>
+        <p>Our founder, Ryan Reynolds, award winning actor and CEO of Mint Mobile, meets with us at every event. Find him making speeches, meeting with people, and sometimes even participating in event games</p>
       </div>
       <div id="RDJ" class="celebs">
         <img src="RDJ.jpg" alt="Robert Downey Jr"/>
@@ -30,15 +30,19 @@
     </div>
   </body>
   <script>
-    let total = 0;
-    let bar = document.getElementById('bar')
-    window.addEventListener('wheel', event => {
-      if (window.scrollY>100){
-        bar.classList.add('stick')
-      }
-      else{
-        bar.classList.remove('stick')
-      }
-    })
+    let RRContainer = document.querySelectorAll('.celebs')[0]
+    let RDJContainer = document.querySelectorAll('.celebs')[1]
+    let AGContainer = document.querySelectorAll('.celebs')[2]
+    let paragraphs = document.querySelectorAll('p')
+    for (let i=0;i<3;i++){
+      document.querySelectorAll('.celebs')[i].addEventListener('mouseover', event=>{
+         //document.querySelectorAll('.celeb')[i].appendChild(paragraphs[i])
+      })
+      document.querySelectorAll('.celebs')[i].addEventListener('mouseleave', event=>{
+        // paragraphs[i].style.opacity = '0'
+        // paragraphs[i].style.transition = 'opacity 0ms 0ms'
+
+      })
+    }
   </script>
 </html>

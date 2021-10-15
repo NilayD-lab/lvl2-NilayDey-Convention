@@ -1,6 +1,7 @@
 :root{
   --direction: -50px;
 }
+
 body{
   position: relative;
   background-color: #ff9447;
@@ -11,6 +12,19 @@ body{
   align-items: center;
   flex-direction: column;
   
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+ 
+body::-webkit-scrollbar-track {
+  display: none;
+
+}
+ 
+body::-webkit-scrollbar-thumb {
+  display: none;
+
 }
 h1{
   text-align: center;
@@ -28,7 +42,7 @@ h1{
 
 }
 #bar{
-  position: sticky;
+  position: absolute;
   top:10px;
   display: flex;
   flex-direction: row;
@@ -65,16 +79,17 @@ h1{
   transition: transform 700ms, opacity 700ms;
   display: flex;
   flex-direction: row;
-  gap: 70px;
-  justify-content: space-between;
+  gap: 6vw;
+  align-items: center;
+  justify-content: space-evenly;
   height: 40vh;
 
 }
 
 #container p{
   transform: translateY(0px);
-  width: 50vw;
-  font-size: 2.5rem;
+  width: 40vw;
+  font-size: 2rem;
   opacity: 0;
   transition: opacity 700ms;
   
@@ -82,35 +97,58 @@ h1{
 }
 
 .img-containers{
-  width: 14vw;
-  height: 14vw;
-  background-color: white;
-  overflow: hidden;
-  overflow-y: hidden;
+  width: 15vw;
+  height: 15vw;
+  background-color: none;
+ 
   position: relative;
-
+  opacity: 0;
+  transition: opacity 700ms;
 }
 .img-containers::before{
   position: absolute;
   overflow: unset;
   content: "";
-  width: 19vw;
-  height: 19vw;
+  width: 15vw;
+  height: 15vw;
   background-color: white;
   transform: rotate(45deg);
-  top: -0px;
-  left: -11px;
-  z-index: 0;
+  z-index: -1;
+  transition: transform 800ms ease-in;
+  box-shadow: inset 0px 0px 16px #676767;
+}
+.img-containers:hover::before{
+  transform: rotate(90deg);
 }
 img{
-  width: 150%;
-  height: 100%;
-  /* overflow: hidden; */
-  height: auto;
-  
-  /* transform: translate(-25%, -25%); */
-  /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
+  width: 15vw;
+  border-radius: 10%;
+  box-shadow: 0px 0px 13px black;
 }
+
+#cat{
+  height: 15vw;
+}
+#dog{
+  height: 15vw;
+}
+
+#scrollbar{
+  position: absolute;
+  top: 43px;
+  right: 0vw;
+  width: 10px;
+  height: 50vh;
+  background-color: white;
+  border-radius: 10px;
+  transition: top 1000ms;
+}
+
+
+
+
+
+
 
 
 .stick .btn{

@@ -4,8 +4,21 @@ body{
     font-family: "Times New Roman", Times, serif;
     
   }
+  body::-webkit-scrollbar {
+    width: .75em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    background: none;
+    
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: #FFFAEB;
+    border-radius: 20px;
+  }
   #bar{
-    position: sticky;
+    position: absolute;
     top:10px;
     display: flex;
     flex-direction: row;
@@ -56,26 +69,45 @@ body{
     border: solid 4px #E9E9E9;
 
     border-radius: 30px;
-    width: 60%;
+    width: 20%;
     height: 300px;
     display: grid;
-    grid-template-columns: 12vw 60%;
+    grid-template-columns: 12vw;
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
+    transition: width 600ms;
   }
+  .celebs:hover{
+    width: 60%;
+    
+    /* grid-template-columns: 12vw 60%; */
 
+  }
+  .celebs:hover img{
+    transform: translate(0%);
+  }
+  .celebs:hover p{
+    white-space: pre-wrap;
+    opacity: 1;
+    transition: opacity 200ms 600ms;
+    
+  }
   img{
     grid-column: 1;
     box-shadow: 0px 0px 10px black;
 
     width: 100%;
     border-radius: 30px;
+    transition: transform 600ms;
   }
   p{
+   
+    opacity: 0;
     grid-column: 2;
     color: black;
     width: 70%;
     margin-left: 10%;
     font-size: 1.5rem;
+    overflow: hidden;
   }

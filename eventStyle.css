@@ -5,7 +5,7 @@ body{
   
 }
 #bar{
-  position: sticky;
+  position: absolute;
   top:10px;
   display: flex;
   flex-direction: row;
@@ -75,8 +75,11 @@ p{
   text-align: center;
   font-family: "Times New Roman", Times, sans-serif;
   font-size: 1.2rem;
-  color: black;
-
+  color: #FFFAEB;
+  transition: color 800ms;
+}
+u{
+  text-underline-offset: 3px;
 }
 #LA div, #NY div{
   background-color: #FFFAEB;
@@ -95,6 +98,10 @@ p{
   align-content: center;
 
 
+}
+
+p:hover{
+  color: black;
 }
 .stick .btn{
   background-color: white;
