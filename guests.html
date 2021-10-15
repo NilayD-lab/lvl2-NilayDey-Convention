@@ -15,34 +15,53 @@
     <h1>Guests</h1>
 
     <div id="container">
-      <div id="RR" class="celebs">
+      <!-- <div id="RR" class="celebs">
         <img src="RR.jpg" alt="Ryan Reynolds" />
-        <p>Our founder, Ryan Reynolds, award winning actor and CEO of Mint Mobile, meets with us at every event. Find him making speeches, meeting with people, and sometimes even participating in event games</p>
+        <p>
+          Our founder, Ryan Reynolds, award winning actor and CEO of Mint
+          Mobile, meets with us at every event. Find him making speeches,
+          meeting with people, and sometimes even participating in event games
+        </p>
       </div>
       <div id="RDJ" class="celebs">
-        <img src="RDJ.jpg" alt="Robert Downey Jr"/>
-        <p>Yes, even Iron Man likes animals. We pretty much just use him for his fans. They like to raid out events when he's at one of them. More people at our events yay!</p>
-      </div>
-      <div id="AG" class="celebs">
+        <img src="RDJ.jpg" alt="Robert Downey Jr" />
+        <p>
+          Yes, even Iron Man likes animals. We pretty much just use him for his
+          fans. They like to raid out events when he's at one of them. More
+          people at our events yay!
+        </p>
+      </div> -->
+      <div id="AG" class="celebs" style="--text: 2px" data-tool-tip = "Ariana likes to spontaneously tell us that she is coming to our events
+          last second. Because of this we don't have enough time to update our
+          events page to let people know she is coming. You're going to have to
+          come to every event for the chance to see her sing and preform">
         <img src="AG.jpg" alt="Ariana Grande" />
-        <p>Ariana likes to spontaneously tell us that she is coming to our events last second. Because of this we don't have enough time to update our events page to let people know she is coming. You're going to have to come to every event for the chance to see her sing and preform</p>
+        <p>
+          Ariana likes to spontaneously tell us that she is coming to our events
+          last second. Because of this we don't have enough time to update our
+          events page to let people know she is coming. You're going to have to
+          come to every event for the chance to see her sing and preform
+        </p>
       </div>
     </div>
   </body>
   <script>
-    let RRContainer = document.querySelectorAll('.celebs')[0]
-    let RDJContainer = document.querySelectorAll('.celebs')[1]
-    let AGContainer = document.querySelectorAll('.celebs')[2]
-    let paragraphs = document.querySelectorAll('p')
-    for (let i=0;i<3;i++){
-      document.querySelectorAll('.celebs')[i].addEventListener('mouseover', event=>{
-         //document.querySelectorAll('.celeb')[i].appendChild(paragraphs[i])
-      })
-      document.querySelectorAll('.celebs')[i].addEventListener('mouseleave', event=>{
-        // paragraphs[i].style.opacity = '0'
-        // paragraphs[i].style.transition = 'opacity 0ms 0ms'
-
-      })
+    let RRContainer = document.querySelectorAll(".celebs")[0];
+    let RDJContainer = document.querySelectorAll(".celebs")[1];
+    let AGContainer = document.querySelectorAll(".celebs")[2];
+    let paragraphs = document.querySelectorAll("p");
+    for (let i = 0; i < 3; i++) {
+      document
+        .querySelectorAll(".celebs")
+        [i].addEventListener("mouseover", (event) => {
+          //document.querySelectorAll('.celeb')[i].appendChild(paragraphs[i])
+        });
+      document
+        .querySelectorAll(".celebs")
+        [i].addEventListener("mouseleave", (event) => {
+          // paragraphs[i].style.opacity = '0'
+          // paragraphs[i].style.transition = 'opacity 0ms 0ms'
+        });
     }
   </script>
 </html>

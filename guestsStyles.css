@@ -77,6 +77,7 @@ body{
     text-align: center;
     justify-content: space-evenly;
     transition: width 600ms;
+    position: relative;
   }
   .celebs:hover{
     width: 60%;
@@ -87,10 +88,20 @@ body{
   .celebs:hover img{
     transform: translate(0%);
   }
+  /* .celebs::after{
+    content: attr(data-tool-tip);
+    position: absolute;
+    width: 30vw;
+    height: 100px;
+    left: 30%;
+    color: black;
+    font-size: 1.5rem;
+  } */
   .celebs:hover p{
     white-space: pre-wrap;
+    transform: scale(1);
     opacity: 1;
-    transition: opacity 200ms 600ms;
+    transition: transform 0ms 600ms, opacity 200ms 600ms ;
     
   }
   img{
@@ -102,8 +113,8 @@ body{
     transition: transform 600ms;
   }
   p{
-   
-    opacity: 0;
+    opacity: 1;
+    transform: scale(0);
     grid-column: 2;
     color: black;
     width: 70%;
